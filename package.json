@@ -1,0 +1,17 @@
+{
+  "name": "voyager",
+  "version": "1.0.0",
+  "description": "Node.js NASA project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Eccel",
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.2"
+  }
+}

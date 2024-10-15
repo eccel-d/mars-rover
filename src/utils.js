@@ -203,5 +203,6 @@ module.exports = {
     mainMenu,
     validatePosition,
     deployRover,
-    processCommands
+    processCommands,
+    deleteRover
 };

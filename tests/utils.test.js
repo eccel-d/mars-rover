@@ -1,4 +1,4 @@
-const { validateCoordinateValue, validatePosition, deployRover, processCommands } = require('../src/utils');
+const { validateCoordinateValue, validatePosition, deployRover, deleteRover } = require('../src/utils');
 
 const readline = require('readline-sync');
 
@@ -50,6 +50,25 @@ describe('Mars Rover Functions', () => {
     expect(roversArray[0].xPosition).toBe(2);
     expect(roversArray[0].yPosition).toBe(2);
     expect(roversArray[0].direction).toBe('W');
+  });
+
+  describe('Mars Rover Functions - Deleting a Rover', () => {
+
+    test('should delete a rover from the array', () => {
+      readline.question.mockReturnValueOnce('1'); 
+      readline.question.mockReturnValueOnce('1'); 
+      readline.question.mockReturnValueOnce('N'); 
+      readline.question.mockReturnValueOnce('ZZZZ'); 
+      const roversArray = [];
+      
+      deployRover(5, 5, roversArray, ['N', 'W', 'S', 'E']);
+      
+      expect(roversArray.length).toBe(1);
+      
+      deleteRover(roversArray, 1); 
+      
+      expect(roversArray.length).toBe(0); 
+    });
   });
 
 });

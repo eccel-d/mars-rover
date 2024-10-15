@@ -4,7 +4,7 @@
   "description": "Node.js NASA project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Daniel Eccel",
   "license": "MIT",
@@ -12,6 +12,13 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "vitest": "^2.1.2"
+    "jest": "^29.7.0"
+  },
+  "jest": {
+  "globals": {
+    "__DEV__": true
   }
+}
+
+
 }
